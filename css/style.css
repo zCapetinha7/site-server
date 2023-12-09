@@ -29,11 +29,11 @@ body::before {
 
 .wrapper {
     width: 850px;
-    background: transparent;
+    background: #fff;   
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #fff;
+    color: black;
     border-radius: 20px;
     padding: 30px 40px;
     display: flex;
@@ -63,15 +63,15 @@ body::before {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid #333;
     border-radius: 40px;
     font-size: 16px;
-    color: #fff;
+    color: black;
     padding: 20px 45px 20px 20px;
 }
 
 .input-box input::placeholder {
-    color: #fff;
+    color: lightslategrey;
 }
 
 .input-box i {
@@ -90,13 +90,13 @@ body::before {
 }
 
 .remember-forgot label input {
-    accent-color: #fff;
+    accent-color: #ffca00;
     margin-right: 3px;
 
 }
 
 .remember-forgot a {
-    color: #fff;
+    color: #004b76;
     text-decoration: none;
 }
 
@@ -125,7 +125,7 @@ body::before {
 }
 
 .register-link p a {
-    color: #fff;
+    color: #004b76;
     text-decoration: none;
     font-weight: 600;
 }
