@@ -18,4 +18,9 @@ Nós encorajamos todos os membros do Pato Sirigueijo a contribuir para o desenvo
 2. **Sugerir Melhorias:** Tem ideias para melhorar o PSG Social? Adoraríamos ouvir suas sugestões na seção de [issues](https://github.com/rafaelmings/site-psg/issues).
 3. **Colaborar no Desenvolvimento:** Se você é um desenvolvedor, sinta-se à vontade para entrar em nosso servidor do Discord para melhorarmos o projeto, ou apenas bater um papo através do link: [Servidor do Discord](https://discord.gg/PGMvZdy5ja).
 
+## 👨‍💻 Desenvolvedores
+- Gabriel Mateus de Andrade
+- Leandro Putini Yasui
+- Rafael Domingues de Oliveira
+
 ![Logo do PSG](https://github.com/rafaelmings/site-psg/blob/main/img/logo-psg-sombra.png)
