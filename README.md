@@ -4,7 +4,7 @@ Bem-vindo ao PSG, uma plataforma online que está sendo desenvolvida pela comuni
 
 ## 🌐 Visão Geral
 
-O PSG Social é uma rede social exclusiva para membros do servidor PSG no Discord. Ele oferece uma variedade de recursos para melhorar a interação entre os membros, proporcionando um ambiente amigável e acolhedor. Os principais recursos incluem:
+Este é um projeto de uma rede social exclusiva para membros do servidor PSG no Discord. Ele oferece uma variedade de recursos para melhorar a interação entre os membros, proporcionando um ambiente amigável e acolhedor. Os principais recursos incluem:
 
 - **Perfis de Usuários:** Crie seu próprio perfil personalizado para compartilhar informações sobre você e seus interesses.
 - **Publicações e Atividades:** Compartilhe atualizações, fotos e eventos com outros membros do PSG.
@@ -16,6 +16,6 @@ Nós encorajamos todos os membros do Pato Sirigueijo a contribuir para o desenvo
 
 1. **Relatar Problemas:** Encontrou algum bug ou problema? Por favor, relate-o em nossa seção de [issues](https://github.com/rafaelmings/site-psg/issues).
 2. **Sugerir Melhorias:** Tem ideias para melhorar o PSG Social? Adoraríamos ouvir suas sugestões na seção de [issues](https://github.com/rafaelmings/site-psg/issues).
-3. **Colaborar no Desenvolvimento:** Se você é um desenvolvedor, sinta-se à vontade para entrar em nosso servidor do Discord para melhorarmos o projeto, ou apenas bater um papo através do link: [discord](https://discord.gg/PGMvZdy5ja).
+3. **Colaborar no Desenvolvimento:** Se você é um desenvolvedor, sinta-se à vontade para entrar em nosso servidor do Discord para melhorarmos o projeto, ou apenas bater um papo através do link: [Servidor do Discord](https://discord.gg/PGMvZdy5ja).
 
 ![Logo do PSG](https://github.com/rafaelmings/site-psg/blob/main/img/logo-psg-sombra.png)
