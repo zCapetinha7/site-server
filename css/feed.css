@@ -67,3 +67,25 @@
 .navbar a:hover {
     text-decoration:underline;
 }
+
+.img-button {
+    margin-top: 100px;
+}
+
+.img-button i {
+    right: 20px;
+    transform: translateY(20%);
+    font-size: 30px;
+}
+
+#fileInput {
+    display: none;
+}
+
+#uploadButton {
+    padding: 10px;
+    background-color: #ffcb00;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
