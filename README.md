@@ -19,6 +19,7 @@ Nós encorajamos todos os membros do Pato Sirigueijo a contribuir para o desenvo
 3. **Colaborar no Desenvolvimento:** Se você é um desenvolvedor, sinta-se à vontade para entrar em nosso servidor do Discord para melhorarmos o projeto, ou apenas bater um papo através do link: [Servidor do Discord](https://discord.gg/PGMvZdy5ja).
 
 ## 👨‍💻 Desenvolvedores
+
 - Gabriel Mateus de Andrade
 - Leandro Putini Yasui
 - Rafael Domingues de Oliveira
