@@ -1,5 +1,47 @@
 <?php
     include('php/protect.php');
+    include('php/connection.php');
+
+    // Verificar se o formulário foi enviado.
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset($_FILES['fileInput']) && $_FILES['fileInput']['error'] === 0) {
+            $file = $_FILES['fileInput'];
+            $userId = $_SESSION['id'];  // Supondo que você tenha uma chave 'user_id' na sua sessão.
+
+            // Obter informações sobre o arquivo.
+            $fileName = $file['name'];
+            $fileTmpName = $file['tmp_name'];
+            $fileSize = $file['size'];
+            $fileError = $file['error'];
+            $fileType = $file['type'];
+
+            // Obter a extensão do arquivo.
+            $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+
+            // Permitir apenas algumas extensões de arquivo. Ajuste conforme necessário.
+            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+            if (in_array($fileExt, $allowedExtensions)) {
+                // Gerar um nome único para o arquivo.
+                $newFileName = uniqid('user_background_', true) . '.' . $fileExt;
+
+                // Caminho onde você deseja salvar a imagem. Ajuste conforme necessário.
+                $uploadPath = 'C:\xampp\htdocs\psg\img\backgrounds\\' . $newFileName;
+
+                // Mover o arquivo para o destino final.
+                move_uploaded_file($fileTmpName, $uploadPath);
+
+                // Salvar o caminho da imagem no banco de dados.
+                $backgroundImage = $uploadPath;
+                $sql = "UPDATE usuarios SET background_image = '$backgroundImage' WHERE id = $userId";
+                $conn->query($sql);
+            } else {
+                // Se a extensão do arquivo não for permitida, você pode lidar com isso de acordo com a sua lógica.
+                echo "A extensão do arquivo não é permitida.";
+            }
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +50,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/duck icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/feed.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Feed - PSG</title>
@@ -19,6 +62,15 @@
         <p>
             <a href="php/logout.php">Sair</a>
         </p>
+        <div class="dark-mode-btn">
+            <input type="checkbox" class="checkbox" id="chk"/>
+
+            <label class="label" for="chk">
+                <i class='bx bxs-moon' style="color: #ffcb00;"></i>
+                <i class='bx bxs-sun' style="color: #f39c12;"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
     </div>
 
     <div class="container">
@@ -43,20 +95,11 @@
     </div>
 
     <script>
-        function changeBackground(input) {
-            const file = input.files[0];
+        const chk = document.getElementById('chk')
 
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function(e) {
-                    const contentDiv = document.getElementsByClassName('content')[0];
-                    contentDiv.style.backgroundImage = `url(${e.target.result})`;
-                };
-
-                reader.readAsDataURL(file);
-            }
-        }
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('dark')
+        })
     </script>
 
 </body>
